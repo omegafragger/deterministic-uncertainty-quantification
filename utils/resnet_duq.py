@@ -22,7 +22,7 @@ class ResNet_DUQ(nn.Module):
         )
         nn.init.kaiming_normal_(self.W, nonlinearity="relu")
 
-        self.resnet = models.resnet18(pretrained=False, num_classes=model_output_size)
+        self.resnet = models.resnet50(pretrained=False, num_classes=model_output_size)
 
         # Adapted resnet from:
         # https://github.com/kuangliu/pytorch-cifar/blob/master/models/resnet.py
